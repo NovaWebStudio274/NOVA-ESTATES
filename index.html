@@ -3,139 +3,149 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Nova Estates | Luxury Property Dealer Website Demo</title>
-<meta name="description" content="Premium luxury real estate website demo for property dealers, builders, real estate consultants and property agencies." />
+<title>Nova Estates | Ultra Luxury Real Estate Demo</title>
+<meta name="description" content="Ultra premium real estate website demo for property dealers, real estate consultants, brokers and agencies." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#050608;--panel:rgba(255,255,255,.08);--line:rgba(255,255,255,.14);
-  --text:#f8f4ea;--muted:#bdb4a1;--gold:#d8b56d;--gold2:#f5df9b;
-  --blue:#6aa8ff;--green:#25D366;--black:#08090c
+  --bg:#030407;--text:#fff8e9;--muted:#bdb29a;--gold:#d8b56d;--gold2:#fff1b6;
+  --line:rgba(255,255,255,.15);--glass:rgba(255,255,255,.075);--green:#25D366;--blue:#75b7ff
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;perspective:1200px}
-body:before{content:"";position:fixed;inset:0;z-index:-6;background:
-radial-gradient(circle at 12% 12%,rgba(216,181,109,.25),transparent 28%),
-radial-gradient(circle at 86% 10%,rgba(106,168,255,.18),transparent 26%),
-radial-gradient(circle at 50% 90%,rgba(216,181,109,.18),transparent 36%),
-linear-gradient(145deg,#020305,#0d1118 55%,#020305)}
-body:after{content:"";position:fixed;inset:0;z-index:-5;background-image:
+body:before{content:"";position:fixed;inset:0;z-index:-8;background:
+radial-gradient(circle at 13% 13%,rgba(216,181,109,.25),transparent 25%),
+radial-gradient(circle at 85% 8%,rgba(117,183,255,.20),transparent 26%),
+radial-gradient(circle at 50% 92%,rgba(216,181,109,.18),transparent 34%),
+linear-gradient(145deg,#010204,#0b1018 55%,#010204)}
+body:after{content:"";position:fixed;inset:0;z-index:-7;background-image:
 linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
 linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
-background-size:54px 54px;mask-image:linear-gradient(to bottom,#000,transparent)}
-.orb{position:fixed;width:470px;height:470px;border-radius:50%;filter:blur(88px);opacity:.58;z-index:-4;animation:float 9s ease-in-out infinite alternate}
-.orb.one{left:-160px;top:120px;background:rgba(216,181,109,.32)}
-.orb.two{right:-170px;bottom:100px;background:rgba(106,168,255,.20);animation-delay:1.2s}
-@keyframes float{to{transform:translate3d(36px,-44px,0) scale(1.12)}}
+background-size:52px 52px;mask-image:linear-gradient(to bottom,#000,transparent)}
+.skyline{position:fixed;inset:0;z-index:-6;opacity:.18;background:
+linear-gradient(to top,rgba(0,0,0,.9),transparent 70%),
+url("https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1800&q=85");
+background-size:cover;background-position:center;animation:sky 18s ease-in-out infinite alternate}
+@keyframes sky{to{transform:scale(1.08) translateY(-18px)}}
+.orb{position:fixed;width:480px;height:480px;border-radius:50%;filter:blur(90px);opacity:.52;z-index:-5;animation:orb 9s ease-in-out infinite alternate}
+.orb.one{left:-170px;top:120px;background:rgba(216,181,109,.34)}.orb.two{right:-180px;bottom:100px;background:rgba(117,183,255,.22);animation-delay:1.3s}
+@keyframes orb{to{transform:translate3d(35px,-45px,0) scale(1.12)}}
 a{text-decoration:none;color:inherit}
-nav{width:min(1220px,92%);margin:22px auto 0;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;border:1px solid var(--line);border-radius:30px;background:rgba(8,9,12,.68);backdrop-filter:blur(24px);box-shadow:0 24px 72px rgba(0,0,0,.42),inset 0 1px 0 rgba(255,255,255,.1);position:sticky;top:14px;z-index:50}
-.brand{display:flex;align-items:center;gap:14px;font-weight:950}.logo{width:54px;height:54px;border-radius:20px;display:grid;place-items:center;color:#090806;background:linear-gradient(135deg,#fff,var(--gold2),var(--gold));box-shadow:0 0 44px rgba(216,181,109,.30),inset 0 2px 8px rgba(255,255,255,.6);font-family:Playfair Display,serif;font-size:26px;transform:rotate(-7deg)}
-.brand small{display:block;color:#afa58e;font-weight:760;font-size:12px;margin-top:3px}.navlinks{display:flex;gap:24px}.navlinks a{color:#e3dac8;font-size:14px;font-weight:850}.navlinks a:hover{color:var(--gold2)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 22px;border-radius:999px;border:1px solid rgba(255,255,255,.14);color:#080806;font-weight:950;background:linear-gradient(135deg,#fff,var(--gold2),var(--gold));box-shadow:0 18px 44px rgba(216,181,109,.22);transition:.25s ease;white-space:nowrap}
-.btn:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 30px 72px rgba(216,181,109,.34)}
-.btn.dark{background:rgba(255,255,255,.08);color:var(--text);box-shadow:none}.btn.wa{background:var(--green);color:white}
-.hero{width:min(1220px,92%);margin:72px auto 0;display:grid;grid-template-columns:1.04fr .96fr;gap:44px;align-items:center;min-height:740px}
-.badge{display:inline-flex;gap:10px;align-items:center;padding:10px 15px;border-radius:999px;border:1px solid rgba(216,181,109,.36);background:rgba(216,181,109,.09);color:#ffe5ad;font-weight:900;font-size:14px;margin-bottom:22px}
-h1{font-family:Outfit,Inter,sans-serif;font-size:clamp(56px,8vw,116px);line-height:.9;letter-spacing:-3px;text-shadow:0 22px 74px rgba(0,0,0,.72)}
-h1 span{font-family:Playfair Display,serif;color:transparent;background:linear-gradient(120deg,#fff 0%,#f5df9b 40%,#d8b56d 70%,#fff 100%);background-size:230% 100%;-webkit-background-clip:text;background-clip:text;animation:shine 4.8s linear infinite;font-style:italic}
+nav{width:min(1240px,92%);margin:22px auto 0;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;border:1px solid var(--line);border-radius:32px;background:rgba(5,7,11,.67);backdrop-filter:blur(24px);box-shadow:0 24px 72px rgba(0,0,0,.42),inset 0 1px 0 rgba(255,255,255,.11);position:sticky;top:14px;z-index:50}
+.brand{display:flex;gap:14px;align-items:center;font-weight:950}.logo{width:56px;height:56px;border-radius:21px;display:grid;place-items:center;background:linear-gradient(135deg,#fff,var(--gold2),var(--gold));color:#090806;font-family:Playfair Display,serif;font-size:27px;box-shadow:0 0 45px rgba(216,181,109,.32);transform:rotate(-7deg)}
+.brand small{display:block;color:#b5aa92;font-size:12px;font-weight:760;margin-top:3px}.navlinks{display:flex;gap:24px}.navlinks a{font-size:14px;font-weight:850;color:#e8dec9}.navlinks a:hover{color:var(--gold2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 22px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:linear-gradient(135deg,#fff,var(--gold2),var(--gold));color:#090806;font-weight:950;box-shadow:0 18px 44px rgba(216,181,109,.22);transition:.25s ease;white-space:nowrap}
+.btn:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 30px 72px rgba(216,181,109,.34)}.btn.dark{background:rgba(255,255,255,.08);color:var(--text);box-shadow:none}.btn.wa{background:var(--green);color:white}
+.hero{width:min(1240px,92%);margin:68px auto 0;display:grid;grid-template-columns:1.03fr .97fr;gap:44px;align-items:center;min-height:760px}
+.badge{display:inline-flex;gap:10px;align-items:center;padding:10px 15px;border-radius:999px;border:1px solid rgba(216,181,109,.36);background:rgba(216,181,109,.10);color:#ffe8b6;font-weight:900;font-size:14px;margin-bottom:22px}
+h1{font-family:Outfit,Inter,sans-serif;font-size:clamp(56px,8vw,118px);line-height:.88;letter-spacing:-3px;text-shadow:0 22px 74px rgba(0,0,0,.72)}
+h1 span{font-family:Playfair Display,serif;font-style:italic;color:transparent;background:linear-gradient(120deg,#fff 0%,#fff1b6 36%,#d8b56d 70%,#fff 100%);background-size:230% 100%;-webkit-background-clip:text;background-clip:text;animation:shine 4.8s linear infinite}
 @keyframes shine{to{background-position:230% 0}}
-.sub{max-width:680px;margin:26px 0 31px;color:var(--muted);font-size:18px;line-height:1.82}
-.actions{display:flex;flex-wrap:wrap;gap:14px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:36px;max-width:680px}.stat{padding:19px;border:1px solid var(--line);border-radius:25px;background:linear-gradient(145deg,rgba(255,255,255,.115),rgba(255,255,255,.04));box-shadow:0 24px 70px rgba(0,0,0,.26),inset 0 1px 0 rgba(255,255,255,.09);transition:.28s ease}.stat:hover{transform:translateY(-8px) rotateX(8deg)}.stat b{display:block;color:var(--gold2);font-size:30px}.stat span{display:block;color:#b7ad98;font-size:13px;font-weight:850;margin-top:3px}
-.stage{position:relative;min-height:670px;transform-style:preserve-3d}.tower{position:absolute;inset:8px 12px 26px 36px;border-radius:48px;border:1px solid rgba(255,255,255,.18);background:linear-gradient(to bottom,rgba(0,0,0,.02),rgba(0,0,0,.78)),url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=88");background-size:cover;background-position:center;box-shadow:0 58px 125px rgba(0,0,0,.62),-20px 20px 0 rgba(255,255,255,.045),inset 0 1px 0 rgba(255,255,255,.18);transform:rotateY(-13deg) rotateX(6deg);overflow:hidden;animation:cardFloat 5s ease-in-out infinite alternate}
+.sub{max-width:690px;margin:26px 0 31px;color:var(--muted);font-size:18px;line-height:1.82}.actions{display:flex;flex-wrap:wrap;gap:14px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:34px;max-width:760px}.stat{padding:17px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(145deg,rgba(255,255,255,.115),rgba(255,255,255,.04));box-shadow:0 24px 70px rgba(0,0,0,.26);transition:.28s ease}.stat:hover{transform:translateY(-8px) rotateX(8deg)}.stat b{display:block;color:var(--gold2);font-size:28px}.stat span{font-size:12px;color:#b7ad98;font-weight:850}
+.stage{position:relative;min-height:690px;transform-style:preserve-3d}.screen{position:absolute;inset:8px 14px 28px 36px;border-radius:50px;border:1px solid rgba(255,255,255,.18);background:
+linear-gradient(to bottom,rgba(0,0,0,.02),rgba(0,0,0,.80)),
+url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1300&q=88");
+background-size:cover;background-position:center;box-shadow:0 58px 125px rgba(0,0,0,.62),-20px 20px 0 rgba(255,255,255,.045),inset 0 1px 0 rgba(255,255,255,.18);transform:rotateY(-13deg) rotateX(6deg);overflow:hidden;animation:cardFloat 5s ease-in-out infinite alternate}
 @keyframes cardFloat{from{transform:rotateY(-13deg) rotateX(6deg) translateY(0)}to{transform:rotateY(-8deg) rotateX(3deg) translateY(-18px)}}
-.tower:after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 0%,rgba(255,255,255,.14) 36%,transparent 48%);transform:translateX(-78%);animation:scan 4.6s infinite}@keyframes scan{65%,100%{transform:translateX(95%)}}
-.hero-info{position:absolute;left:0;right:32px;bottom:20px;margin:auto;width:88%;padding:24px;border-radius:30px;background:rgba(8,9,12,.70);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.18);box-shadow:0 25px 70px rgba(0,0,0,.36)}.hero-info h3{font-size:28px;margin-bottom:9px}.hero-info p{color:#e6dcc7;line-height:1.65}
-.cube{position:absolute;right:-16px;top:76px;width:190px;height:190px;transform-style:preserve-3d;animation:cube 7s ease-in-out infinite alternate}.cube div{position:absolute;inset:0;border-radius:34px;background:linear-gradient(135deg,#fff,var(--gold2),var(--gold));box-shadow:0 34px 58px rgba(0,0,0,.55),inset 0 10px 28px rgba(255,255,255,.34);display:grid;place-items:center;font-size:70px}.cube div:before{content:"🏙️"}@keyframes cube{from{transform:rotateZ(-8deg) rotateY(0deg) translateY(0)}to{transform:rotateZ(8deg) rotateY(28deg) translateY(-22px)}}
-.chip{position:absolute;left:2px;top:62px;padding:17px 18px;border-radius:22px;background:rgba(8,9,12,.70);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(18px);box-shadow:0 25px 70px rgba(0,0,0,.35);font-weight:950;animation:bob 3.8s ease-in-out infinite alternate}.chip span{color:var(--gold2)}@keyframes bob{to{transform:translateY(-18px)}}
-section{width:min(1220px,92%);margin:98px auto}.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:30px}.section-head h2{font-family:Playfair Display,serif;font-size:clamp(42px,5vw,72px);line-height:1}.section-head p{max-width:560px;color:var(--muted);line-height:1.75}.reveal{opacity:0;transform:translateY(42px) scale(.98);transition:900ms cubic-bezier(.2,.8,.2,1)}.reveal.show{opacity:1;transform:translateY(0) scale(1)}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{position:relative;padding:30px;min-height:254px;border-radius:34px;border:1px solid var(--line);background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.04));box-shadow:0 28px 80px rgba(0,0,0,.30),inset 0 1px 0 rgba(255,255,255,.10);overflow:hidden;transform-style:preserve-3d;transition:.28s ease}.card:hover{transform:translateY(-10px) rotateX(6deg) rotateY(-5deg);border-color:rgba(216,181,109,.5)}.icon{width:64px;height:64px;border-radius:22px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(216,181,109,.25),rgba(106,168,255,.14));border:1px solid rgba(216,181,109,.28);font-size:30px;margin-bottom:22px}.card h3{font-size:23px;margin-bottom:13px}.card p{color:var(--muted);line-height:1.7}
-.properties{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.property{border-radius:36px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(145deg,rgba(255,255,255,.11),rgba(255,255,255,.04));box-shadow:0 30px 86px rgba(0,0,0,.31);transition:.28s ease}.property:hover{transform:translateY(-10px);border-color:rgba(216,181,109,.52)}.prop-img{height:230px;background-size:cover;background-position:center;position:relative}.prop-img:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.80),transparent 65%)}.prop-body{padding:24px}.prop-body h3{font-size:24px;margin-bottom:8px}.prop-body p{color:var(--muted);line-height:1.65}.price{font-size:24px;color:var(--gold2);font-weight:950;margin-top:14px}
-.showcase{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}.big-panel{min-height:490px;border-radius:44px;border:1px solid var(--line);background:linear-gradient(to right,rgba(0,0,0,.18),rgba(0,0,0,.76)),url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=88");background-size:cover;background-position:center;padding:38px;display:flex;align-items:flex-end;box-shadow:0 34px 100px rgba(0,0,0,.37),inset 0 1px 0 rgba(255,255,255,.13)}.big-panel h2{font-family:Playfair Display,serif;font-size:60px;line-height:1;margin-bottom:10px}.big-panel p{max-width:570px;color:#e6dcc7;line-height:1.7}.side-stack{display:grid;gap:18px}.mini{padding:30px;border-radius:34px;min-height:236px;border:1px solid var(--line);background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.045));box-shadow:0 28px 80px rgba(0,0,0,.29),inset 0 1px 0 rgba(255,255,255,.10)}.mini b{font-size:40px;color:var(--gold2)}.mini p{color:var(--muted);line-height:1.7;margin-top:10px}
-.cta{position:relative;overflow:hidden;border-radius:44px;padding:50px;display:flex;justify-content:space-between;align-items:center;gap:24px;border:1px solid rgba(216,181,109,.34);background:linear-gradient(135deg,rgba(8,9,12,.88),rgba(216,181,109,.46),rgba(106,168,255,.22)),url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=88");background-size:cover;background-position:center;background-blend-mode:multiply;box-shadow:0 38px 120px rgba(216,181,109,.16)}.cta h2{font-family:Playfair Display,serif;font-size:60px;line-height:1}.cta p{max-width:590px;line-height:1.75;color:#fff1da}.cta .btn{background:white;color:#111}
-footer{width:min(1220px,92%);margin:60px auto 28px;padding-top:24px;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;border-top:1px solid var(--line);color:#afa58e;font-weight:750}.sticky{position:fixed;right:22px;bottom:22px;z-index:99;width:64px;height:64px;border-radius:50%;display:grid;place-items:center;color:white;background:var(--green);font-size:28px;font-weight:950;box-shadow:0 18px 44px rgba(37,211,102,.36);animation:pulse 1.8s infinite}@keyframes pulse{50%{transform:scale(1.08)}}
-@media(max-width:950px){.navlinks{display:none}.hero{grid-template-columns:1fr;margin-top:46px;min-height:auto}.stage{min-height:560px}.tower{inset:20px 0 20px 0;transform:none}.stats,.grid,.properties,.showcase{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:12px}.cta{display:block;padding:34px}.cta .btn{margin-top:20px}.actions .btn{width:100%}}
-@media(max-width:560px){.brand small{display:none}.brand div:nth-child(2){max-width:190px}.btn{padding:12px 16px;font-size:13px}.stage{min-height:470px}.cube{width:150px;height:150px;right:-28px}.cube div{font-size:54px}.chip{left:8px;top:35px}.stats{grid-template-columns:1fr}.cta h2,.big-panel h2{font-size:42px}h1{font-size:56px;letter-spacing:-1px}}
+.screen:after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 0%,rgba(255,255,255,.16) 36%,transparent 48%);transform:translateX(-78%);animation:scan 4.6s infinite}@keyframes scan{65%,100%{transform:translateX(95%)}}
+.glass-info{position:absolute;left:0;right:32px;bottom:20px;width:88%;margin:auto;padding:24px;border-radius:30px;background:rgba(5,7,11,.68);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.18);box-shadow:0 25px 70px rgba(0,0,0,.36)}.glass-info h3{font-size:28px;margin-bottom:9px}.glass-info p{color:#e6dcc7;line-height:1.65}
+.orbit{position:absolute;right:-20px;top:72px;width:210px;height:210px;border-radius:50%;border:1px solid rgba(216,181,109,.35);animation:spin 10s linear infinite}.orbit:before,.orbit:after{content:"";position:absolute;width:58px;height:58px;border-radius:20px;background:linear-gradient(135deg,#fff,var(--gold2),var(--gold));box-shadow:0 18px 40px rgba(0,0,0,.35)}.orbit:before{left:14px;top:14px}.orbit:after{right:10px;bottom:18px}.center-cube{position:absolute;right:39px;top:131px;width:96px;height:96px;border-radius:28px;background:linear-gradient(135deg,#fff,var(--gold2),var(--gold));display:grid;place-items:center;font-size:42px;box-shadow:0 30px 55px rgba(0,0,0,.45);animation:cube 5s ease-in-out infinite alternate}@keyframes spin{to{transform:rotate(360deg)}}@keyframes cube{to{transform:translateY(-14px) rotateY(26deg)}}.chip{position:absolute;left:2px;top:62px;padding:17px 18px;border-radius:22px;background:rgba(5,7,11,.70);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(18px);box-shadow:0 25px 70px rgba(0,0,0,.35);font-weight:950;animation:bob 3.8s ease-in-out infinite alternate}.chip span{color:var(--gold2)}@keyframes bob{to{transform:translateY(-18px)}}
+section{width:min(1240px,92%);margin:96px auto}.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:30px}.section-head h2{font-family:Playfair Display,serif;font-size:clamp(42px,5vw,72px);line-height:1}.section-head p{max-width:570px;color:var(--muted);line-height:1.75}.reveal{opacity:0;transform:translateY(42px) scale(.98);transition:900ms cubic-bezier(.2,.8,.2,1)}.reveal.show{opacity:1;transform:translateY(0) scale(1)}
+.feature-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.feature{padding:26px;border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.04));box-shadow:0 26px 76px rgba(0,0,0,.29);transition:.28s ease}.feature:hover{transform:translateY(-10px);border-color:rgba(216,181,109,.52)}.feature b{font-size:36px;color:var(--gold2)}.feature h3{font-size:21px;margin:14px 0 9px}.feature p{color:var(--muted);line-height:1.65;font-size:14px}
+.properties{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.property{border-radius:36px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(145deg,rgba(255,255,255,.11),rgba(255,255,255,.04));box-shadow:0 30px 86px rgba(0,0,0,.31);transition:.28s ease}.property:hover{transform:translateY(-10px);border-color:rgba(216,181,109,.52)}.prop-img{height:230px;background-size:cover;background-position:center;position:relative}.prop-img:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.82),transparent 65%)}.pill{position:absolute;z-index:2;left:16px;bottom:14px;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(12px);font-size:12px;font-weight:900}.prop-body{padding:24px}.prop-body h3{font-size:24px;margin-bottom:8px}.prop-body p{color:var(--muted);line-height:1.65}.price{font-size:24px;color:var(--gold2);font-weight:950;margin-top:14px}
+.luxury{display:grid;grid-template-columns:1.18fr .82fr;gap:18px}.big-panel{min-height:510px;border-radius:44px;border:1px solid var(--line);background:linear-gradient(to right,rgba(0,0,0,.18),rgba(0,0,0,.78)),url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1500&q=88");background-size:cover;background-position:center;padding:40px;display:flex;align-items:flex-end;box-shadow:0 34px 100px rgba(0,0,0,.37)}.big-panel h2{font-family:Playfair Display,serif;font-size:62px;line-height:1;margin-bottom:10px}.big-panel p{max-width:580px;color:#e6dcc7;line-height:1.7}.side{display:grid;gap:18px}.mini{padding:30px;border-radius:34px;min-height:246px;border:1px solid var(--line);background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.045));box-shadow:0 28px 80px rgba(0,0,0,.29)}.mini b{font-size:38px;color:var(--gold2)}.mini p{color:var(--muted);line-height:1.7;margin-top:10px}
+.cta{border-radius:46px;padding:52px;display:flex;justify-content:space-between;align-items:center;gap:24px;border:1px solid rgba(216,181,109,.34);background:linear-gradient(135deg,rgba(5,7,11,.88),rgba(216,181,109,.48),rgba(117,183,255,.22)),url("https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1500&q=88");background-size:cover;background-position:center;background-blend-mode:multiply;box-shadow:0 38px 120px rgba(216,181,109,.16)}.cta h2{font-family:Playfair Display,serif;font-size:62px;line-height:1}.cta p{max-width:600px;color:#fff1da;line-height:1.75}.cta .btn{background:white;color:#111}
+footer{width:min(1240px,92%);margin:60px auto 28px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;color:#afa58e;font-weight:750}.sticky{position:fixed;right:22px;bottom:22px;z-index:99;width:64px;height:64px;border-radius:50%;display:grid;place-items:center;color:white;background:var(--green);font-size:28px;box-shadow:0 18px 44px rgba(37,211,102,.36)}
+@media(max-width:950px){.navlinks{display:none}.hero{grid-template-columns:1fr;margin-top:42px;min-height:auto}.stage{min-height:530px}.screen{inset:20px 0 20px 0;transform:none}.stats,.feature-row,.properties,.luxury{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:12px}.cta{display:block;padding:34px}.cta .btn{margin-top:20px;width:100%}.actions .btn{width:100%}}
+@media(max-width:560px){.brand small{display:none}.brand div:nth-child(2){max-width:190px}.btn{padding:12px 16px;font-size:13px}.stage{min-height:470px}.orbit{width:160px;height:160px;right:-36px}.center-cube{width:78px;height:78px;right:24px;top:113px}.chip{left:8px;top:35px}.cta h2,.big-panel h2{font-size:42px}h1{font-size:54px;letter-spacing:-1px}}
 </style>
 </head>
 <body>
-<div class="orb one"></div><div class="orb two"></div>
-
+<div class="skyline"></div><div class="orb one"></div><div class="orb two"></div>
 <nav>
-  <div class="brand"><div class="logo">NE</div><div><div>NOVA ESTATES</div><small>Luxury Real Estate Website Demo</small></div></div>
-  <div class="navlinks"><a href="#services">Services</a><a href="#properties">Properties</a><a href="#why">Why Us</a><a href="#contact">Contact</a></div>
-  <a class="btn" href="#contact">Get Inquiry</a>
+  <div class="brand"><div class="logo">NE</div><div><div>NOVA ESTATES</div><small>Ultra Luxury Real Estate Demo</small></div></div>
+  <div class="navlinks"><a href="#features">Features</a><a href="#properties">Listings</a><a href="#premium">Premium</a><a href="#contact">Contact</a></div>
+  <a class="btn" href="#contact">Get Leads</a>
 </nav>
 
 <main class="hero">
   <div>
-    <div class="badge">🏆 Premium Property Dealer Website Demo • Mobile Ready</div>
-    <h1>Sell Properties With <span>Luxury Presence</span></h1>
-    <p class="sub">A high-end real estate website concept made for property dealers, builders, brokers and real estate consultants who want more trust, more calls and more serious buyer inquiries.</p>
-    <div class="actions"><a class="btn wa" href="#contact">WhatsApp Inquiry</a><a class="btn dark" href="#properties">View Listings</a></div>
-    <div class="stats"><div class="stat"><b>3D</b><span>Premium Visuals</span></div><div class="stat"><b>24/7</b><span>Online Showroom</span></div><div class="stat"><b>100%</b><span>Mobile Responsive</span></div></div>
+    <div class="badge">🏙️ Ultra Premium Property Dealer Website • 3D Luxury Demo</div>
+    <h1>Make Your Property Business Look <span>Expensive</span></h1>
+    <p class="sub">A high-conversion real estate website concept for property dealers, brokers and builders who want a luxury online image, stronger trust and more serious buyer inquiries.</p>
+    <div class="actions"><a class="btn wa" href="#contact">WhatsApp Inquiry</a><a class="btn dark" href="#properties">View Demo Listings</a></div>
+    <div class="stats">
+      <div class="stat"><b>500+</b><span>Properties Showcase</span></div>
+      <div class="stat"><b>₹100Cr+</b><span>Deal Value Look</span></div>
+      <div class="stat"><b>24/7</b><span>Online Office</span></div>
+      <div class="stat"><b>100%</b><span>Mobile Ready</span></div>
+    </div>
   </div>
   <div class="stage">
-    <div class="tower"><div class="hero-info"><h3>Real Estate Website That Feels Expensive</h3><p>Perfect for builder floors, luxury apartments, plots, rental deals and property consultation.</p></div></div>
-    <div class="cube"><div></div></div>
-    <div class="chip">Luxury Listings<br><span>Lead Generation Ready</span></div>
+    <div class="screen"><div class="glass-info"><h3>Dubai-Level Premium First Impression</h3><p>Made to impress buyers, sellers and investors within the first 5 seconds.</p></div></div>
+    <div class="orbit"></div><div class="center-cube">🏢</div>
+    <div class="chip">Lead Generation<br><span>Dealer Ready Demo</span></div>
   </div>
 </main>
 
-<section id="services" class="reveal">
-  <div class="section-head"><h2>Built For Property Dealers</h2><p>Sections designed to make a dealer look trusted and convert visitors into calls or WhatsApp inquiries.</p></div>
-  <div class="grid">
-    <div class="card"><div class="icon">🏠</div><h3>Builder Floors</h3><p>Showcase available builder floors with photos, pricing range, location and direct inquiry button.</p></div>
-    <div class="card"><div class="icon">🏢</div><h3>Apartments</h3><p>Present premium apartments, societies and ready-to-move properties in a clean luxury layout.</p></div>
-    <div class="card"><div class="icon">📍</div><h3>Location Focused</h3><p>Highlight service areas, maps and nearby landmarks so buyers instantly understand location value.</p></div>
-    <div class="card"><div class="icon">🤝</div><h3>Buyer & Seller Leads</h3><p>Separate CTAs for buyers, sellers and rental clients to generate more useful conversations.</p></div>
-    <div class="card"><div class="icon">📸</div><h3>Property Gallery</h3><p>Photos, interiors and project highlights make the dealer look more professional online.</p></div>
-    <div class="card"><div class="icon">⚡</div><h3>Fast Contact</h3><p>WhatsApp, call buttons and inquiry sections are placed everywhere for quick conversion.</p></div>
+<section id="features" class="reveal">
+  <div class="section-head"><h2>Designed To Sell Trust</h2><p>Every section is built to make a local property dealer look more premium and credible.</p></div>
+  <div class="feature-row">
+    <div class="feature"><b>🏠</b><h3>Property Listings</h3><p>Show builder floors, flats, plots, rentals and commercial spaces beautifully.</p></div>
+    <div class="feature"><b>📲</b><h3>WhatsApp Leads</h3><p>Strong inquiry buttons make it easy for buyers to contact instantly.</p></div>
+    <div class="feature"><b>📍</b><h3>Area Focus</h3><p>Highlight local areas, landmarks and high-demand locations.</p></div>
+    <div class="feature"><b>💎</b><h3>Luxury Branding</h3><p>Premium design helps the dealer look serious and high-value.</p></div>
   </div>
 </section>
 
 <section id="properties" class="reveal">
-  <div class="section-head"><h2>Featured Listings</h2><p>Demo property cards. These can be changed with any dealer’s real properties, photos and prices.</p></div>
+  <div class="section-head"><h2>Featured Properties</h2><p>Demo listings that can be replaced with any dealer’s real photos, prices and locations.</p></div>
   <div class="properties">
-    <div class="property"><div class="prop-img" style="background-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=88')"></div><div class="prop-body"><h3>Luxury Builder Floor</h3><p>3 BHK premium floor with modern interiors and parking.</p><div class="price">₹ On Request</div></div></div>
-    <div class="property"><div class="prop-img" style="background-image:url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=88')"></div><div class="prop-body"><h3>Modern Apartment</h3><p>Ready-to-move apartment with premium society features.</p><div class="price">₹ On Request</div></div></div>
-    <div class="property"><div class="prop-img" style="background-image:url('https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=900&q=88')"></div><div class="prop-body"><h3>Residential Plot</h3><p>Prime location plot for investment or dream home.</p><div class="price">₹ On Request</div></div></div>
+    <div class="property"><div class="prop-img" style="background-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=88')"><div class="pill">Builder Floor</div></div><div class="prop-body"><h3>Luxury 3 BHK Floor</h3><p>Premium interiors, parking, lift and modern design.</p><div class="price">₹ On Request</div></div></div>
+    <div class="property"><div class="prop-img" style="background-image:url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=88')"><div class="pill">Apartment</div></div><div class="prop-body"><h3>Ready-To-Move Flat</h3><p>Society apartment with clean layout and premium amenities.</p><div class="price">₹ On Request</div></div></div>
+    <div class="property"><div class="prop-img" style="background-image:url('https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=900&q=88')"><div class="pill">Investment</div></div><div class="prop-body"><h3>Prime Location Plot</h3><p>High-potential residential plot for home or investment.</p><div class="price">₹ On Request</div></div></div>
   </div>
 </section>
 
-<section id="why" class="reveal">
-  <div class="showcase">
-    <div class="big-panel"><div><h2>Turn Visitors Into Serious Property Leads</h2><p>This website is designed like a luxury online office for property dealers — premium visuals, trust sections and quick inquiry options.</p></div></div>
-    <div class="side-stack">
-      <div class="mini"><b>Premium Trust</b><p>High-end design creates a stronger first impression before the client even calls.</p></div>
-      <div class="mini"><b>Easy Updates</b><p>Listings, photos, locations, prices and contact details can be updated for each dealer.</p></div>
+<section id="premium" class="reveal">
+  <div class="luxury">
+    <div class="big-panel"><div><h2>Not Just A Website. A Premium Online Office.</h2><p>For property dealers, image matters. This layout makes the business look bigger, cleaner and more trusted before the customer even calls.</p></div></div>
+    <div class="side">
+      <div class="mini"><b>Instant Credibility</b><p>Luxury visuals, counters and listings create a stronger first impression than a simple business card.</p></div>
+      <div class="mini"><b>Easy Customization</b><p>Change logo, dealer name, WhatsApp number, properties, areas and real photos for any agency.</p></div>
     </div>
   </div>
 </section>
 
 <section id="contact" class="reveal">
   <div class="cta">
-    <div><h2>Want This For Your Agency?</h2><p>This demo can be customized with your agency name, logo, properties, WhatsApp number, service area and real photos.</p></div>
+    <div><h2>Want This For Your Property Business?</h2><p>This demo can be customized with your name, number, properties, logo, real photos, locations and inquiry buttons.</p></div>
     <a class="btn" href="tel:+910000000000">Call / WhatsApp</a>
   </div>
 </section>
 
-<footer><div>© 2026 Nova Estates Demo</div><div>Luxury real estate website concept by Nova Web Studio</div></footer>
+<footer><div>© 2026 Nova Estates Demo</div><div>Ultra luxury real estate concept by Nova Web Studio</div></footer>
 <a class="sticky" href="#contact">☘</a>
 
 <script>
-const revealItems=document.querySelectorAll('.reveal');
-const observer=new IntersectionObserver((entries)=>{entries.forEach((entry)=>{if(entry.isIntersecting)entry.target.classList.add('show')})},{threshold:.12});
-revealItems.forEach((item)=>observer.observe(item));
-document.querySelectorAll('.card,.property,.mini').forEach((el)=>{
-  el.addEventListener('mousemove',(e)=>{
+const items=document.querySelectorAll('.reveal');
+const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')})},{threshold:.12});
+items.forEach(i=>obs.observe(i));
+document.querySelectorAll('.feature,.property,.mini').forEach(el=>{
+  el.addEventListener('mousemove',e=>{
     const r=el.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;
     const rx=-((y-r.height/2)/(r.height/2))*5,ry=((x-r.width/2)/(r.width/2))*5;
     el.style.transform=`translateY(-10px) rotateX(${rx}deg) rotateY(${ry}deg)`;
   });
   el.addEventListener('mouseleave',()=>{el.style.transform=''});
+});
+window.addEventListener('scroll',()=>{
+  const y=window.scrollY;
+  document.querySelector('.skyline').style.transform=`scale(${1+y*0.00004}) translateY(${-y*0.02}px)`;
 });
 </script>
 </body>
